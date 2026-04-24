@@ -6,14 +6,14 @@ This project is an automated WhatsApp chatbot built using n8n, Google Gemini AI,
 
 ## 🚀 Features
 
-- WhatsApp webhook integration
-- AI-powered auto-replies using Google Gemini
-- Business-focused conversation handling
-- Lead generation and customer engagement
-- Memory-based conversation context
-- Custom knowledge base support
-- Dynamic API-based message sending
-- Real-time response automation
+- WhatsApp webhook integration  
+- AI-powered auto-replies using Google Gemini  
+- Business-focused conversation handling  
+- Lead generation and customer engagement  
+- Memory-based conversation context  
+- Custom knowledge base support  
+- Dynamic API-based message sending  
+- Real-time response automation  
 
 ---
 
@@ -33,9 +33,20 @@ This project is an automated WhatsApp chatbot built using n8n, Google Gemini AI,
 
 ```mermaid
 flowchart LR
-    A[WhatsApp User] --> B[Webhook]
-    B --> C[Process Data]
-    C --> D[AI Agent - Gemini]
-    D --> E[Generate Response]
-    E --> F[Send via API]
-    F --> G[WhatsApp Reply]
+    A["WhatsApp User"] --> B["Webhook"]
+    B --> C["Process Data"]
+    C --> D["AI Agent - Gemini"]
+    D --> E["Generate Response"]
+    E --> F["Send via API"]
+    F --> G["WhatsApp Reply"]
+```
+
+🖼️ Product Preview
+
+<p align="center">
+  <img src="Whatsapp Bot.png" alt="WhatsApp AI Bot Workflow" width="900"/>
+</p>
+
+<p align="center">
+  <b>End-to-end automation:</b> Capture → Process → Store → Respond ⚡
+</p>
