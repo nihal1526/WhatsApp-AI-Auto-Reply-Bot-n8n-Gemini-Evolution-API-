@@ -1,0 +1,399 @@
+{
+  "name": "janab",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "janab",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8759668f-5f67-4ee4-b846-4299f24af1ff",
+      "name": "Webhook",
+      "webhookId": "9bf1b38c-0988-456d-9336-c4b5fe3dee8d"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ff5c7824-30a5-4098-bd16-a3be74e274e3",
+              "name": "chat_id",
+              "value": "={{ $json.body.sender }}",
+              "type": "string"
+            },
+            {
+              "id": "0a9ac2b1-586c-4421-b6ad-af98cbd893e0",
+              "name": "instance_name",
+              "value": "={{ $json.body.instance }}",
+              "type": "string"
+            },
+            {
+              "id": "c9040167-f463-4bdb-a3ac-d8f338f9e2f3",
+              "name": "api_key",
+              "value": "={{ $json.body.apikey }}",
+              "type": "string"
+            },
+            {
+              "id": "aedda979-f7ab-4b8f-9110-a195a14856d6",
+              "name": "url_sever",
+              "value": "={{ $json.body.server_url }}",
+              "type": "string"
+            },
+            {
+              "id": "b218db04-474b-4530-95c3-b15a0f90e2cc",
+              "name": "user_message",
+              "value": "={{ $json.body.data.message.conversation }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "1f28c213-ad67-4d25-ba42-0c305fd1e364",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.user_message }}",
+        "options": {
+          "systemMessage": "=You are an AI-powered WhatsApp assistant for ARN Innovation Technology (ARN IT), a Digital Marketing and IT Company based in Dubai, UAE.\n\nYour role is to provide accurate, professional, and helpful responses using the following knowledge base.\n\nAlways reply in a polite, friendly, and business-focused tone. Keep messages short, clear, and suitable for WhatsApp.\n\nIf the user asks about services, pricing, contact details, portfolio, or consultations, respond using the information below.\n\nDo NOT provide information outside this knowledge base.\nDo NOT make assumptions.\nAlways encourage users to contact the team for detailed discussions.\n\n==================================================\nCOMPANY INFORMATION\n==================================================\n\nName: ARN Innovation Technology  \nShort Name: ARN IT  \nTagline: Digital Marketing and IT Company in Dubai  \nDescription: Leading digital marketing and IT solution company in Dubai with 12+ years of experience  \nLocation: Dubai, UAE  \nExpertise: IT Solutions and Digital Marketing Services  \n\n==================================================\nCONTACT DETAILS\n==================================================\n\nPhone: +971 04 834 1191  \nWhatsApp: +971 55 216 1978  \nEmail: hello@arnit.ae  \nAddress: https://maps.app.goo.gl/jgwc1vc5YHpCiDmKA\n2908, Silver Tower, Business Bay, Dubai, UAE.   \nWorking Hours: Always Available  \nResponse Time: Usually replies in a few minutes  \n\n==================================================\nSOCIAL MEDIA\n==================================================\n\nFacebook: https://www.facebook.com/profile.php?id=61575469237973  \nInstagram: https://www.instagram.com/arnit.ae/  \nTwitter (X): https://www.x.com/arnit_ae  \nLinkedIn: https://www.linkedin.com/company/arn-innovations-technology/  \n\n==================================================\nSERVICES\n==================================================\n\nDIGITAL MARKETING SERVICES:\n\n1. Digital Marketing Services\n   - SEO, PPC, Social Media, Email, Video Marketing\n   - https://arnit.ae/service/digital-marketing-services/\n\n2. Social Media Marketing\n   - Facebook, Instagram, LinkedIn campaigns\n   - https://arnit.ae/service/social-media-marketing/\n\n3. Search Engine Optimization (SEO)\n   - Google ranking and organic growth\n   - https://arnit.ae/service/search-engine-optimization/\n\n4. Pay-Per-Click (PPC)\n   - Google Ads and paid advertising\n   - https://arnit.ae/service/pay-per-click-ppc/\n\n5. Email Marketing\n   - Lead nurturing campaigns\n   - https://arnit.ae/service/email-marketing/\n\n6. Video Production\n   - Marketing videos\n   - https://arnit.ae/service/video-production/\n\n\nIT SOLUTIONS:\n\n1. Web Development\n   - Responsive and fast websites\n   - https://arnit.ae/service/web-development/\n\n2. Custom Software Development\n   - Business-specific software\n   - https://arnit.ae/service/custome-software-development/\n\n3. Mobile App Development\n   - Android & iOS apps\n   - https://arnit.ae/service/mobile-app-development/\n\n4. UI/UX Design\n   - User-friendly designs\n   - https://arnit.ae/service/ui-ux-design/\n\n5. Cloud Solutions\n   - AWS, Azure, Infrastructure\n   - https://arnit.ae/service/cloud-solutions/\n\n6. IT Consulting & Support\n   - Managed IT services\n   - https://arnit.ae/service/it-consulting-support/\n\n==================================================\nCOMPANY STATISTICS\n==================================================\n\nTeam Members: 50+  \nClient Retention: 92%  \nCompleted Projects: 250+  \nExperience: 12+ Years  \n\n==================================================\nCLIENT TESTIMONIALS\n==================================================\n\nNAT Contracting (Construction)  \nService: Digital Marketing  \nRating: ⭐⭐⭐⭐⭐  \n\nBagtas Tours (Travel)  \nService: Mobile App Development  \nRating: ⭐⭐⭐⭐⭐  \n\nNAM Technical Services  \nService: IT Solutions  \nRating: ⭐⭐⭐⭐⭐  \n\nYalla Battery  \nService: Web Development  \nRating: ⭐⭐⭐⭐⭐  \n\n==================================================\nWORK PROCESS\n==================================================\n\nResearch → Explore → Gather → Ideate → Plan → Execute → Implement → Deploy → Support & Maintenance\n\n==================================================\nWHY CHOOSE US\n==================================================\n\n1. We Understand Your Goals  \n2. Strategies That Deliver Results  \n3. We Build Long-Term Success  \n\n==================================================\nFREQUENTLY ASKED QUESTIONS\n==================================================\n\nQ: What services do you offer?\nA: We provide digital marketing, SEO, PPC, social media, web development, mobile apps, custom software, cloud solutions, and IT support.\n\nQ: Why choose ARN IT?\nA: We offer end-to-end solutions with measurable results and long-term support.\n\nQ: Do you work with startups and SMEs?\nA: Yes, we work with startups, SMEs, and large enterprises.\n\nQ: Do you provide customized solutions?\nA: Yes, all services are tailored to business needs.\n\n==================================================\nDEFAULT QUICK REPLIES\n==================================================\n\nGREETING:\nHi! Welcome to ARN Innovation Technology 👋  \nHow can we help you today?\n\nSERVICES:\nWe offer Digital Marketing and IT Solutions.\nWould you like details on SEO, Web Development, Mobile Apps, or Marketing?\n\nCONTACT:\n📞 +971 04 834 1191  \n📱 +971 55 216 1978  \n📧 hello@arnit.ae  \n\nPRICING:\nOur pricing is customized based on your project.\nWould you like to share your requirements or book a free consultation?\n\nPORTFOLIO:\nWe’ve completed 250+ projects with 92% retention.\nWould you like industry-specific examples?\n\nMEETING:\nWe offer in-person, virtual, and phone consultations.\nPlease share your preferred time.\n\n==================================================\nINTENT HANDLING\n==================================================\n\nIf the user asks about:\n\nServices → Explain available services  \nPricing → Ask requirements + offer consultation  \nContact → Share contact details  \nPortfolio → Share clients and experience  \nSEO → Explain SEO services  \nWebsite → Explain web development  \nApp → Explain mobile app development  \nMarketing → Explain digital marketing  \nSupport → Explain IT support  \nMeeting → Offer consultation options  \n\n==================================================\n\nAlways aim to convert conversations into leads.\nEncourage users to contact or book consultations.\nBe professional, polite, and friendly.\n\nand save the client number who your charting with and remember it as : {{ $('Webhook').item.json.body.data.key.remoteJid }}\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "8ec451e7-56d4-4b29-908c-050ec08e9062",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.chat_id }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        432,
+        208
+      ],
+      "id": "8b77b250-580b-45dd-8da9-7a5d36bdba72",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Edit Fields').item.json.url_sever }}/message/sendText/{{ $('Edit Fields').item.json.instance_name }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $('Edit Fields').item.json.api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $('Webhook').item.json.body.data.key.remoteJid }}"
+            },
+            {
+              "name": "text",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        768,
+        0
+      ],
+      "id": "410ceeb8-e2da-482a-999c-05c9cbdb58be",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        288,
+        208
+      ],
+      "id": "c59c2c28-fbe3-4f5e-b5aa-3117ecdb2826",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "aWdSxatTLg5kDZnM",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "outputFieldName": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Output_Field_Name', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTimeTool",
+      "typeVersion": 2,
+      "position": [
+        624,
+        208
+      ],
+      "id": "6736c840-4eb9-4b8a-928a-6bfb55ae1e7c",
+      "name": "Date & Time"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "janab123.app.n8n.cloud",
+            "user-agent": "axios/1.13.2",
+            "content-length": "1643",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "168.231.103.141",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "IN",
+            "cf-ray": "9c5f28ee14ce40a5-BOM",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-type": "application/json",
+            "x-forwarded-for": "168.231.103.141, 172.69.95.140",
+            "x-forwarded-host": "janab123.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-101-597df9c45b-bx8dt",
+            "x-is-trusted": "yes",
+            "x-real-ip": "168.231.103.141"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "messages.upsert",
+            "instance": "Janab",
+            "data": {
+              "key": {
+                "remoteJid": "971521319764@s.whatsapp.net",
+                "remoteJidAlt": "971521319764@s.whatsapp.net",
+                "fromMe": false,
+                "id": "ACCC7D2FE2312CAA24620443C0604B51",
+                "participant": "",
+                "addressingMode": "lid"
+              },
+              "pushName": "ARNIT",
+              "status": "DELIVERY_ACK",
+              "message": {
+                "messageContextInfo": {
+                  "threadId": [],
+                  "deviceListMetadata": {
+                    "senderKeyIndexes": [],
+                    "recipientKeyIndexes": [],
+                    "senderKeyHash": {
+                      "0": 27,
+                      "1": 148,
+                      "2": 130,
+                      "3": 95,
+                      "4": 143,
+                      "5": 157,
+                      "6": 44,
+                      "7": 220,
+                      "8": 5,
+                      "9": 84
+                    },
+                    "senderTimestamp": {
+                      "low": 1768564988,
+                      "high": 0,
+                      "unsigned": true
+                    },
+                    "recipientKeyHash": {
+                      "0": 240,
+                      "1": 147,
+                      "2": 4,
+                      "3": 64,
+                      "4": 169,
+                      "5": 149,
+                      "6": 239,
+                      "7": 170,
+                      "8": 123,
+                      "9": 188
+                    },
+                    "recipientTimestamp": {
+                      "low": 1769757052,
+                      "high": 0,
+                      "unsigned": true
+                    }
+                  },
+                  "deviceListMetadataVersion": 2,
+                  "messageSecret": {
+                    "0": 233,
+                    "1": 254,
+                    "2": 240,
+                    "3": 206,
+                    "4": 68,
+                    "5": 223,
+                    "6": 18,
+                    "7": 114,
+                    "8": 53,
+                    "9": 182,
+                    "10": 236,
+                    "11": 150,
+                    "12": 198,
+                    "13": 21,
+                    "14": 70,
+                    "15": 167,
+                    "16": 94,
+                    "17": 0,
+                    "18": 105,
+                    "19": 191,
+                    "20": 154,
+                    "21": 29,
+                    "22": 98,
+                    "23": 171,
+                    "24": 151,
+                    "25": 133,
+                    "26": 201,
+                    "27": 85,
+                    "28": 196,
+                    "29": 102,
+                    "30": 177,
+                    "31": 233
+                  }
+                },
+                "conversation": "Hi"
+              },
+              "contextInfo": {
+                "mentionedJid": [],
+                "groupMentions": [],
+                "statusAttributions": [],
+                "entryPointConversionSource": "global_search_new_chat",
+                "entryPointConversionApp": "whatsapp",
+                "entryPointConversionDelaySeconds": 4
+              },
+              "messageType": "conversation",
+              "messageTimestamp": 1769757133,
+              "instanceId": "40c428e9-73f4-471a-b52f-647419651f7e",
+              "source": "android"
+            },
+            "destination": "https://janab123.app.n8n.cloud/webhook/janab",
+            "date_time": "2026-01-30T04:12:14.725Z",
+            "sender": "447367055139@s.whatsapp.net",
+            "server_url": "https://evo-evolution-api.cjtkoz.easypanel.host",
+            "apikey": "2572B3C581D0-4ADB-8C43-578B9ADDCA2A"
+          },
+          "webhookUrl": "https://janab123.app.n8n.cloud/webhook/janab",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "eafcce3b-fac6-4382-aabf-98bad6ff64ec",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a395c07e4f097b41a1f4f3e71b2419ebf20007a0d8bf6b249a8c631e4a5b9a9e"
+  },
+  "id": "dRRn_aHKSlyzvAg10an0G",
+  "tags": []
+}
